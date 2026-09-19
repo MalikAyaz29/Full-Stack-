@@ -1,0 +1,65 @@
+body{
+   background-color: #f7dab4; 
+   padding: 40px 20px;
+}
+
+.team{
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.card {
+flex: 1 1 220px;
+max-width: 260px;
+background: #fff;
+border-radius: 10px;
+padding: 20px;
+text-align: center;
+box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+position: relative;
+}
+
+.badge {
+position: absolute;
+top: 10px;
+right: 10px;
+background: #91a04d;
+color: #fff;
+font-size: 12px;
+padding: 4px 10px;
+border-radius: 12px;
+}
+
+h3::before{
+    content: "*";
+}
+
+.card:hover {
+box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.25));
+filter: grayscale(100%);
+}
+
+.card:first-child {
+border-top: 4px solid #9b59b6;
+}
+.card:last-child {
+border-top: 4px solid #71b7e6;
+}
+
+.card:nth-child(odd) {
+background: #faf7fc;
+}
+.card:nth-child(even) {
+background: #f4f9fd;
+}
+

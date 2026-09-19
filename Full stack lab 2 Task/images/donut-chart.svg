@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="180" height="180">
+  <!-- Gray background ring -->
+  <circle cx="100" cy="100" r="65" fill="none" stroke="#f1f3f4" stroke-width="26"/>
+  <!-- Green Segment (45%) -->
+  <circle cx="100" cy="100" r="65" fill="none" stroke="#00a389" stroke-width="26" stroke-dasharray="184 408" stroke-dashoffset="102" transform="rotate(-90 100 100)"/>
+  <!-- Pink Segment (25%) -->
+  <circle cx="100" cy="100" r="65" fill="none" stroke="#ff3e6c" stroke-width="26" stroke-dasharray="102 408" stroke-dashoffset="326" transform="rotate(-90 100 100)"/>
+  <!-- Grey Segment (30%) -->
+  <circle cx="100" cy="100" r="65" fill="none" stroke="#b0bec5" stroke-width="26" stroke-dasharray="122 408" stroke-dashoffset="224" transform="rotate(-90 100 100)"/>
+  
+  <!-- Percentage badges -->
+  <!-- Top 45% -->
+  <rect x="80" y="8" width="40" height="22" rx="6" fill="#ffffff" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))"/>
+  <text x="100" y="24" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="11" font-weight="700" fill="#00a389">45%</text>
+
+  <!-- Bottom Right 25% -->
+  <rect x="135" y="130" width="40" height="22" rx="6" fill="#ffffff" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))"/>
+  <text x="155" y="146" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="11" font-weight="700" fill="#ff3e6c">25%</text>
+
+  <!-- Bottom Left 30% -->
+  <rect x="25" y="130" width="40" height="22" rx="6" fill="#ffffff" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.15))"/>
+  <text x="45" y="146" text-anchor="middle" font-family="'Poppins', sans-serif" font-size="11" font-weight="700" fill="#607d8b">30%</text>
+</svg>

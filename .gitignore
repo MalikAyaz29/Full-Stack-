@@ -1,0 +1,14 @@
+# Ignore all ZIP archives
+*.zip
+
+# Ignore profile pictures
+*profile*.*
+profile.jpg
+profile.png
+profile.jpeg
+
+# OS & Editor files
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

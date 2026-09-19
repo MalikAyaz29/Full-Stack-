@@ -1,0 +1,74 @@
+/* Body */
+body {
+    margin: 0;
+    background-color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Header */
+header {
+    background-color: burlywood;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Navigation */
+nav {
+    background-color: rgb(126, 187, 187);
+    padding: 5px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+/* Main */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Table */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px 15px;
+}
+
+/* Form */
+form label {
+    display: inline-block;
+    width: 90px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    padding: 4px 8px;
+    width: 220px;
+}
+
+form textarea {
+    padding: 4px 8px;
+    width: 220px;
+    height: 70px;
+}
+
+form button {
+    margin-left: 95px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}

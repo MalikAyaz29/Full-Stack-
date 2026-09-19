@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVDESK - Knowledge Base</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero-banner {
+            background-color: #553cdb;
+            color: white;
+            padding-bottom: 50px;
+        }
+
+        .btn-trial {
+            background-color: #48bb78;
+            color: white;
+            border-radius: 20px;
+            padding: 6px 18px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .btn-trial:hover {
+            background-color: #38a169;
+            color: white;
+        }
+
+        .btn-search {
+            background-color: #48bb78;
+            color: white;
+            border: none;
+        }
+
+        .btn-search:hover {
+            background-color: #38a169;
+            color: white;
+        }
+
+        .article-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .article-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .helpful-text {
+            font-size: 12px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Hero Section -->
+    <header class="hero-banner">
+        <nav class="navbar navbar-expand-lg navbar-dark pt-3">
+            <div class="container">
+                <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                    <i class="bi bi-code-slash text-success me-2 fs-5"></i> DEVDESK
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navContent">
+                    <ul class="navbar-nav align-items-center gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#popular">Popular Articles</a></li>
+                                <li><a class="dropdown-item" href="#categories">All Categories</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="btn-trial">Free Trial</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center mt-4">
+            <h1 class="fw-bold">Welcome to Our Knowledge Base</h1>
+            <p class="text-white-50">Find articles and resources to help with your questions.</p>
+
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-6 col-10">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search the knowledge base...">
+                        <button class="btn btn-search px-3" type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+
+        <!-- Popular Articles Section -->
+        <section id="popular" class="mb-5">
+            <h3 class="text-center fw-bold mb-4">Popular Articles</h3>
+
+            <div class="row g-3">
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="article-card">
+                        <div>
+                            <i class="bi bi-file-earmark-text text-muted fs-5 mb-2 d-block"></i>
+                            <h6 class="fw-bold text-dark">Onboarding 101: Getting Started with Lorem Ipsum</h6>
+                        </div>
+                        <div class="helpful-text mt-3">
+                            <i class="bi bi-hand-thumbs-up me-1"></i> 38 people found this article helpful
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="article-card">
+                        <div>
+                            <i class="bi bi-file-earmark-text text-muted fs-5 mb-2 d-block"></i>
+                            <h6 class="fw-bold text-dark">Navigating the Dashboard: Key Features Explained</h6>
+                        </div>
+                        <div class="helpful-text mt-3">
+                            <i class="bi bi-hand-thumbs-up me-1"></i> 25 people found this article helpful
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="article-card">
+                        <div>
+                            <i class="bi bi-file-earmark-text text-muted fs-5 mb-2 d-block"></i>
+                            <h6 class="fw-bold text-dark">Integrating Lorem Ipsum with Other Software</h6>
+                        </div>
+                        <div class="helpful-text mt-3">
+                            <i class="bi bi-hand-thumbs-up me-1"></i> 23 people found this article helpful
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <a href="#" class="article-card">
+                        <div>
+                            <i class="bi bi-file-earmark-text text-muted fs-5 mb-2 d-block"></i>
+                            <h6 class="fw-bold text-dark">Troubleshooting Common Issues in Systems</h6>
+                        </div>
+                        <div class="helpful-text mt-3">
+                            <i class="bi bi-hand-thumbs-up me-1"></i> 19 people found this article helpful
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="mb-5">
+            <h3 class="text-center fw-bold mb-4">Categories</h3>
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card p-3 shadow-sm border-0 text-center">
+                        <div class="card-body">
+                            <i class="bi bi-folder text-primary fs-2 mb-2 d-block"></i>
+                            <h5 class="fw-bold">Getting Started</h5>
+                            <p class="text-muted small mb-0">Guides for beginners and account setup</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card p-3 shadow-sm border-0 text-center">
+                        <div class="card-body">
+                            <i class="bi bi-gear text-success fs-2 mb-2 d-block"></i>
+                            <h5 class="fw-bold">Features & Settings</h5>
+                            <p class="text-muted small mb-0">Learn how to customize your workspace</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card p-3 shadow-sm border-0 text-center">
+                        <div class="card-body">
+                            <i class="bi bi-question-circle text-warning fs-2 mb-2 d-block"></i>
+                            <h5 class="fw-bold">Billing & Support</h5>
+                            <p class="text-muted small mb-0">Answers to pricing, plans, and billing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-white border-top text-muted small">
+        <p class="mb-0">© 2026 DEVDESK Knowledge Base. Lab Task 1.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
