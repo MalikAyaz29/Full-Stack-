@@ -1,6 +1,6 @@
-/* TASK 1 — Model the Catalog and Orders (Variables, Objects, Arrays) */
+/* TASK 1 - Model the Catalog and Orders (Variables, Objects, Arrays) */
 
-const bookCatalog = [ // const: array reference never changes
+const bookCatalog = [
   { id: 1, title: "Clean Code",              author: "Robert C. Martin",  price: 22.50, stock: 10, category: "Programming" },
   { id: 2, title: "The Pragmatic Programmer", author: "David Thomas",      price: 30.00, stock: 3,  category: "Programming" },
   { id: 3, title: "Atomic Habits",            author: "James Clear",       price: 16.99, stock: 7,  category: "Self-Help" },
@@ -11,7 +11,7 @@ const bookCatalog = [ // const: array reference never changes
   { id: 8, title: "Educated",                 author: "Tara Westover",     price: 14.50, stock: 0,  category: "Non-Fiction" },
 ];
 
-let incomingOrders = [ // let: orders may change as new ones come in
+let incomingOrders = [
   { bookTitle: "Clean Code",               quantity: 2 },
   { bookTitle: "Dune",                     quantity: 3 },
   { bookTitle: "Educated",                 quantity: 1 },
@@ -22,7 +22,7 @@ let incomingOrders = [ // let: orders may change as new ones come in
   { bookTitle: "Deep Work",               quantity: -1 },
 ];
 
-var systemName = "Online Bookstore Order System"; // var: function-scoped, shown for comparison
+var systemName = "Online Bookstore Order System";
 
 let catalogBody = document.querySelector("#catalogTable tbody");
 for (let i = 0; i < bookCatalog.length; i++) {
@@ -34,7 +34,7 @@ for (let i = 0; i < bookCatalog.length; i++) {
     "<td>" + book.author + "</td>" +
     "<td>$" + book.price.toFixed(2) + "</td>" +
     "<td>" + book.stock + "</td>" +
-    '<td><span class="cat-pill ' + book.category.toLowerCase() + '">' + book.category + "</span></td>";
+    '<td><span class="cat-pill">' + book.category + "</span></td>";
   catalogBody.appendChild(row);
 }
 
@@ -49,7 +49,7 @@ for (let i = 0; i < incomingOrders.length; i++) {
 }
 
 
-/* TASK 2 — Validate a Single Order (Conditions, Operators, Ternary Operator) */
+/* TASK 2 - Validate a Single Order (Conditions, Operators, Ternary Operator) */
 
 function validateOrder(order) {
   let book = bookCatalog.find(function (b) {
@@ -66,7 +66,7 @@ function validateOrder(order) {
 
   let result = book.stock >= order.quantity
     ? "VALID: \"" + book.title + "\" can be fulfilled (" + order.quantity + " requested, " + book.stock + " in stock)."
-    : "REJECTED: \"" + book.title + "\" — not enough stock (" + order.quantity + " requested, " + book.stock + " available).";
+    : "REJECTED: \"" + book.title + "\" - not enough stock (" + order.quantity + " requested, " + book.stock + " available).";
 
   return result;
 }
@@ -76,11 +76,11 @@ let test1 = validateOrder({ bookTitle: "Clean Code", quantity: 2 });
 let test2 = validateOrder({ bookTitle: "JavaScript Mastery", quantity: 1 });
 
 task2Output.innerHTML =
-  '<div class="output-item fulfilled"><span class="icon">✅</span><span>Test 1: ' + test1 + "</span></div>" +
-  '<div class="output-item rejected"><span class="icon">❌</span><span>Test 2: ' + test2 + "</span></div>";
+  '<div class="output-item fulfilled">Test 1: ' + test1 + "</div>" +
+  '<div class="output-item rejected">Test 2: ' + test2 + "</div>";
 
 
-/* TASK 3 — Process a Batch of Orders (Loops, Array Methods — map, reduce) */
+/* TASK 3 - Process a Batch of Orders (Loops, Array Methods - map, reduce) */
 
 function processOrders(orders) {
   let results = [];
@@ -120,9 +120,9 @@ function processOrders(orders) {
 
   let summary = results.map(function (r) {
     if (r.status === "fulfilled") {
-      return { text: r.bookTitle + " x" + r.quantity + " — $" + r.total.toFixed(2), status: "fulfilled" };
+      return { text: r.bookTitle + " x" + r.quantity + " - $" + r.total.toFixed(2), status: "fulfilled" };
     } else {
-      return { text: r.bookTitle + " x" + r.quantity + " — " + r.reason, status: "rejected" };
+      return { text: r.bookTitle + " x" + r.quantity + " - " + r.reason, status: "rejected" };
     }
   });
 
@@ -143,8 +143,8 @@ let task3Report = document.getElementById("task3Report");
 let reportHTML = "";
 for (let i = 0; i < task3Result.summary.length; i++) {
   let item = task3Result.summary[i];
-  let icon = item.status === "fulfilled" ? "✅" : "❌";
-  reportHTML += '<div class="output-item ' + item.status + '"><span class="icon">' + icon + "</span><span>" + item.text + "</span></div>";
+  let tag = item.status === "fulfilled" ? "[Fulfilled] " : "[Rejected] ";
+  reportHTML += '<div class="output-item ' + item.status + '">' + tag + item.text + "</div>";
 }
 task3Report.innerHTML = reportHTML;
 
@@ -166,7 +166,7 @@ for (let i = 0; i < bookCatalog.length; i++) {
 }
 
 
-/* TASK 4 — ES6 Class, Destructuring, Template Literals */
+/* TASK 4 - ES6 Class, Destructuring, Template Literals */
 
 class Book {
   constructor(id, title, author, price, stock, category) {
@@ -180,8 +180,8 @@ class Book {
 
   isLowStock() {
     return this.stock < 5
-      ? `⚠️ Only ${this.stock} copies left!`
-      : `✔️ ${this.stock} copies available.`;
+      ? `Only ${this.stock} copies left!`
+      : `${this.stock} copies available.`;
   }
 }
 
@@ -191,7 +191,7 @@ let bookInstances = bookCatalog.map(function (b) {
 
 function printOrderConfirmation(book, quantity) {
   let { title, price } = book;
-  let message = `Order confirmed: ${quantity} x ${title} — $${(price * quantity).toFixed(2)} total.`;
+  let message = `Order confirmed: ${quantity} x ${title} - $${(price * quantity).toFixed(2)} total.`;
   return message;
 }
 
@@ -205,7 +205,7 @@ for (let i = 0; i < bookInstances.length; i++) {
   card.className = "stock-card " + (isLow ? "is-low" : "is-ok");
   card.innerHTML =
     '<div class="card-title">' + book.title + "</div>" +
-    '<div class="card-author">' + book.author + "</div>" +
+    '<div class="card-author">by ' + book.author + "</div>" +
     '<div class="card-status">' + stockMsg + "</div>";
   cardGrid.appendChild(card);
 }
@@ -216,12 +216,12 @@ let msg2 = printOrderConfirmation(bookInstances[4], 5);
 let msg3 = printOrderConfirmation(bookInstances[2], 1);
 
 confirmEl.innerHTML =
-  '<div class="output-item info"><span class="icon">🛒</span><span>' + msg1 + "</span></div>" +
-  '<div class="output-item info"><span class="icon">🛒</span><span>' + msg2 + "</span></div>" +
-  '<div class="output-item info"><span class="icon">🛒</span><span>' + msg3 + "</span></div>";
+  '<div class="output-item info">' + msg1 + "</div>" +
+  '<div class="output-item info">' + msg2 + "</div>" +
+  '<div class="output-item info">' + msg3 + "</div>";
 
 
-/* TASK 5 — Low-Stock and Category Reporting (filter, logical AND, sort) */
+/* TASK 5 - Low-Stock and Category Reporting (filter, logical AND, sort) */
 
 function lowStockReport(category, threshold) {
   let filtered = bookInstances.filter(function (book) {
@@ -233,7 +233,7 @@ function lowStockReport(category, threshold) {
   });
 
   let html = '<div class="report-panel">';
-  html += "<h4>📋 " + category + " — Stock &lt; " + threshold + "</h4>";
+  html += "<h4>" + category + " - Stock &lt; " + threshold + "</h4>";
 
   if (filtered.length === 0) {
     html += '<div class="report-empty">No books match this criteria.</div>';
@@ -243,7 +243,7 @@ function lowStockReport(category, threshold) {
       let stockClass = stock === 0 ? "out" : stock < 3 ? "low" : "ok";
 
       html += '<div class="report-item">';
-      html += '<div class="book-info"><span>📕 ' + title + '</span><span class="author-sm">by ' + author + " · $" + price.toFixed(2) + "</span></div>";
+      html += '<div class="book-info"><span>' + title + '</span><span class="author-sm">by ' + author + " - $" + price.toFixed(2) + "</span></div>";
       html += '<span class="report-stock"><span class="stock-badge ' + stockClass + '">' + stock + " in stock</span></span>";
       html += "</div>";
     }

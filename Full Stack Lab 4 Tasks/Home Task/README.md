@@ -1,12 +1,12 @@
-# 📚 Online Bookstore Order System
+# Online Bookstore Order System
 
-**Full Stack Lab 04 — Home Task**
+**Full Stack Lab 04 - Home Task**
 
 A client-side JavaScript application that simulates an online bookstore order management system. It demonstrates core JavaScript concepts including variables, conditionals, loops, array methods, ES6 classes, and DOM manipulation.
 
 ---
 
-## 🚀 Features
+## Features
 
 | Task | Title | Concepts Covered |
 |------|-------|------------------|
@@ -18,38 +18,38 @@ A client-side JavaScript application that simulates an online bookstore order ma
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Home Task/
 ├── index.html       # Main HTML page with all task sections
 ├── bookstore.js     # JavaScript logic for all 5 tasks
-├── style.css        # Styling for layout, tables, cards, and badges
+├── style.css        # Clean, simple styling for layout, tables, and reports
 └── README.md        # Project documentation
 ```
 
 ---
 
-## 📖 Task Breakdown
+## Task Breakdown
 
-### Task 1 — Model the Catalog & Orders
-Defines an **8-book catalog** (with `id`, `title`, `author`, `price`, `stock`, `category`) and **8 incoming orders**. Renders both as HTML tables using DOM manipulation.
+### Task 1 - Model the Catalog & Orders
+Defines an 8-book catalog (with id, title, author, price, stock, category) and 8 incoming orders. Renders both as HTML tables using DOM manipulation.
 
-### Task 2 — Validate a Single Order
+### Task 2 - Validate a Single Order
 A `validateOrder()` function checks whether a book exists in the catalog, the requested quantity is positive, and sufficient stock is available. Returns descriptive status messages using the ternary operator.
 
-### Task 3 — Process a Batch of Orders
+### Task 3 - Process a Batch of Orders
 A `processOrders()` function iterates over all incoming orders using `for...of`, fulfills valid ones (deducting stock), and rejects invalid ones with a reason. Uses `map()` to build a summary and `reduce()` to calculate total revenue.
 
-### Task 4 — ES6 Book Class
-An ES6 `Book` class with an `isLowStock()` method that uses template literals. Demonstrates **destructuring** in the `printOrderConfirmation()` helper. Renders low-stock cards and order confirmations in the UI.
+### Task 4 - ES6 Book Class
+An ES6 `Book` class with an `isLowStock()` method that uses template literals. Demonstrates destructuring in the `printOrderConfirmation()` helper. Renders low-stock cards and order confirmations in the UI.
 
-### Task 5 — Low-Stock & Category Reporting
+### Task 5 - Low-Stock & Category Reporting
 A `lowStockReport(category, threshold)` function uses `filter()` with logical AND to find books below a stock threshold in a specific category, then `sort()` to order them by stock ascending. Generates reports for Programming, Fiction, Self-Help, and Non-Fiction.
 
 ---
 
-## 📦 Book Catalog
+## Book Catalog
 
 | ID | Title | Author | Price | Category |
 |----|-------|--------|-------|----------|
@@ -64,24 +64,23 @@ A `lowStockReport(category, threshold)` function uses `filter()` with logical AN
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
-- **HTML5** — Semantic structure and tables
-- **CSS3** — Responsive layout, category pills, stock badges, card grid
-- **JavaScript (ES6)** — Classes, template literals, destructuring, array methods
-- **Google Fonts** — Inter typeface
+- **HTML5** - Semantic structure and tables
+- **CSS3** - Clean, beginner-level styling
+- **JavaScript (ES6)** - Classes, template literals, destructuring, array methods
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 1. Clone or download this repository.
-2. Open `index.html` in any modern web browser.
-3. All tasks execute automatically on page load — no build step required.
+2. Open `index.html` in any web browser.
+3. All tasks execute automatically on page load.
 
 ---
 
-## 👤 Author
+## Author
 
-**M. Ayaz Rafique** — Roll No. 241925  
+**M. Ayaz Rafique** - Roll No. 241925  
 5th Semester, Full Stack Development Lab
