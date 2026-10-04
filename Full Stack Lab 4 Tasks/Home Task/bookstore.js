@@ -34,7 +34,7 @@ for (let i = 0; i < bookCatalog.length; i++) {
     "<td>" + book.author + "</td>" +
     "<td>$" + book.price.toFixed(2) + "</td>" +
     "<td>" + book.stock + "</td>" +
-    '<td><span class="cat-pill">' + book.category + "</span></td>";
+    '<td><span class="cat-pill ' + book.category.toLowerCase().replace(" ", "-") + '">' + book.category + "</span></td>";
   catalogBody.appendChild(row);
 }
 
