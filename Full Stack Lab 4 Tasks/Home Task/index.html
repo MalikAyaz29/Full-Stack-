@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Online Bookstore Order System — JavaScript Lab 04 Home Task" />
+  <title>Online Bookstore Order System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <span class="badge-label">JavaScript Lab 04 — Home Task</span>
+      <h1>📚 Online Bookstore<br /><span class="accent">Order System</span></h1>
+      <p class="subtitle">Modeling catalogs, validating orders, processing batches, ES6 classes &amp; reporting.</p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="task-section" id="task1">
+      <div class="task-header">
+        <span class="task-number">01</span>
+        <div>
+          <h2>Model the Catalog &amp; Orders</h2>
+          <p class="task-tag">Variables · Objects · Arrays</p>
+        </div>
+      </div>
+      <div class="task-body">
+        <h3>📖 Book Catalog</h3>
+        <div class="table-wrap">
+          <table id="catalogTable">
+            <thead>
+              <tr>
+                <th>ID</th><th>Title</th><th>Author</th><th>Price</th><th>Stock</th><th>Category</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <h3 style="margin-top:1.5rem;">🛒 Incoming Orders</h3>
+        <div class="table-wrap">
+          <table id="ordersTable">
+            <thead>
+              <tr><th>#</th><th>Book Title</th><th>Qty</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="task-section" id="task2">
+      <div class="task-header">
+        <span class="task-number">02</span>
+        <div>
+          <h2>Validate a Single Order</h2>
+          <p class="task-tag">Conditions · Operators · Ternary</p>
+        </div>
+      </div>
+      <div class="task-body">
+        <div id="task2Output" class="output-list"></div>
+      </div>
+    </section>
+
+    <section class="task-section" id="task3">
+      <div class="task-header">
+        <span class="task-number">03</span>
+        <div>
+          <h2>Process a Batch of Orders</h2>
+          <p class="task-tag">Loops · map() · reduce()</p>
+        </div>
+      </div>
+      <div class="task-body">
+        <h3>Summary Report</h3>
+        <div id="task3Report" class="output-list"></div>
+        <div id="task3Revenue" class="revenue-box"></div>
+        <h3 style="margin-top:1.5rem;">Updated Stock</h3>
+        <div class="table-wrap">
+          <table id="updatedStockTable">
+            <thead>
+              <tr><th>Title</th><th>Stock Remaining</th><th>Status</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="task-section" id="task4">
+      <div class="task-header">
+        <span class="task-number">04</span>
+        <div>
+          <h2>ES6 Book Class</h2>
+          <p class="task-tag">Classes · Destructuring · Template Literals</p>
+        </div>
+      </div>
+      <div class="task-body">
+        <h3>Low-Stock Check</h3>
+        <div id="task4LowStock" class="card-grid"></div>
+        <h3 style="margin-top:1.5rem;">Order Confirmations</h3>
+        <div id="task4Confirmations" class="output-list"></div>
+      </div>
+    </section>
+
+    <section class="task-section" id="task5">
+      <div class="task-header">
+        <span class="task-number">05</span>
+        <div>
+          <h2>Low-Stock &amp; Category Reporting</h2>
+          <p class="task-tag">filter() · Logical AND · sort()</p>
+        </div>
+      </div>
+      <div class="task-body">
+        <div id="task5Reports" class="reports-grid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Online Bookstore Order System &mdash; Full Stack Lab 04 Home Task</p>
+    </div>
+  </footer>
+
+  <script src="bookstore.js"></script>
+</body>
+</html>
